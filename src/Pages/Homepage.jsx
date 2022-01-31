@@ -1,50 +1,46 @@
-import React from 'react'
-import axios from 'axios'
-import { NavLink } from "react-router-dom";
+import React from "react";
+import {NavLink , Link } from "react-router-dom";
+import beers from "../assets/beers.png";
+import randombeer from "../assets/random-beer.png";
+import newBeer from "../assets/new-beer.png";
 
 const Homepage = () => {
-
-
-    return (
-     
-<nav>
-<img src="../assets/beers.png" alt="allbeers"/>
-
-        <NavLink to="/beers">All Beers </NavLink>
-        <div>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
-        blanditiis minima explicabo reiciendis, iusto modi obcaecati quibusdam
-        consequuntur molestiae expedita! Facere expedita architecto temporibus
-        alias at dicta, earum iusto sapiente.
-    </div>
-
-    <img src="../assets/random-beer.png" alt="randombeer" />
-
-        <NavLink to="/random-beer">Random Beer</NavLink>
-        <div>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
-        blanditiis minima explicabo reiciendis, iusto modi obcaecati quibusdam
-        consequuntur molestiae expedita! Facere expedita architecto temporibus
-        alias at dicta, earum iusto sapiente.
-    </div>
-
-    <img src="../assets/new-beer.png" alt="newbeer" />
-
-        <NavLink to="/new-beer"> New Beer</NavLink>
-        <div>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
-        blanditiis minima explicabo reiciendis, iusto modi obcaecati quibusdam
-        consequuntur molestiae expedita! Facere expedita architecto temporibus
-        alias at dicta, earum iusto sapiente.
-    </div>
-
-</nav>
-
-
-
-    ) 
+  return (
+    <div>
+      
     
+        <div>
+        <img src={beers} alt="" /> 
+        <Link to="/beers">  <h1> All Beers </h1></Link>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+          blanditiis minima explicabo reiciendis, iusto modi obcaecati quibusdam
+          consequuntur molestiae expedita! Facere expedita architecto temporibus
+          alias at dicta, earum iusto sapiente.
+        </div>
 
-}
 
-export default Homepage; 
+       
+        <div>
+        <img src={randombeer} alt="randombeer" />
+        <NavLink to="/random-beer"> <h1> Random Beer</h1> </NavLink>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+          blanditiis minima explicabo reiciendis, iusto modi obcaecati quibusdam
+          consequuntur molestiae expedita! Facere expedita architecto temporibus
+          alias at dicta, earum iusto sapiente.
+        </div>
+
+      
+        <div>
+        <img src={newBeer} alt="newbeer" />
+<NavLink to="/new-beer"> <h1> New Beer  </h1> </NavLink>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+          blanditiis minima explicabo reiciendis, iusto modi obcaecati quibusdam
+          consequuntur molestiae expedita! Facere expedita architecto temporibus
+          alias at dicta, earum iusto sapiente.
+        </div>
+      
+    </div>
+  );
+};
+
+export default Homepage;
